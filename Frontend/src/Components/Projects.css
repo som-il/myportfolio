@@ -1,0 +1,207 @@
+/* PROJECT SECTION */
+
+.project-container {
+    width: 100%;
+    padding: 80px 6%;
+    background: #080808;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+
+    
+     animation-name:slideAndfade;
+    animation-duration: 2s;
+    animation-timing-function: ease-out forwards;
+
+}
+
+
+@keyframes slideAndfade{
+    0%{
+        opacity: 0;
+       transform: translateY(-20px);
+    }
+
+    100%{
+       
+        opacity: 1;
+         transform: translateY(0px);
+    }
+}
+
+/* Background glow */
+
+.project-container::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(255, 0, 35, 0.08);
+    filter: blur(120px);
+    top: 20%;
+    right: -100px;
+    pointer-events: none;
+}
+
+/* SECTION LABEL */
+
+.project {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #ff3535;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+}
+
+.project span {
+    display: inline-block;
+    width: 25px;
+    height: 3px;
+    background: #ff2525;
+    box-shadow: 0 0 10px #ff2525;
+}
+
+/* MAIN HEADING */
+
+.workk {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #f5f5f5;
+    letter-spacing: -1px;
+}
+
+.workk span {
+    color: #ff3030;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+/* PROJECT CARDS */
+
+.project-container .project1,
+.project-container .project2 {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 47%;
+    min-height: 190px;
+    margin: 1%;
+    padding: 30px;
+    background: linear-gradient(
+        145deg,
+        #171717,
+        #0c0c0c
+    );
+    border: 1px solid #292929;
+    border-radius: 12px;
+    transition: all 0.35s ease;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+/* RED GLOW ON HOVER */
+
+.project-container .project1:hover,
+.project-container .project2:hover {
+    transform: translateY(-8px);
+    border-color: #ff3030;
+    box-shadow:
+        0 10px 35px rgba(255, 0, 0, 0.15),
+        inset 0 0 20px rgba(255, 0, 0, 0.04);
+}
+
+/* CARD TOP RED LINE */
+
+.project-container .project1::before,
+.project-container .project2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #ff2525;
+    box-shadow: 0 0 12px #ff2525;
+    transition: width 0.4s ease;
+}
+
+.project-container .project1:hover::before,
+.project-container .project2:hover::before {
+    width: 100%;
+}
+
+/* PROJECT TITLES */
+
+.title,
+.title2 {
+    font-size: 23px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.project-container .project1:hover .title,
+.project-container .project2:hover .title2 {
+    color: #ff3535;
+}
+
+/* PROJECT DESCRIPTION */
+
+.para,
+.para2 {
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 400px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .project-container {
+        padding: 60px 5%;
+    }
+
+    .project-container .project1,
+    .project-container .project2 {
+        width: 100%;
+        margin: 12px 0;
+        min-height: 160px;
+        padding: 25px;
+    }
+
+    .work {
+        font-size: 29px;
+        margin-bottom: 25px;
+    }
+
+    .title,
+    .title2 {
+        font-size: 21px;
+    }
+
+    .para,
+    .para2 {
+        font-size: 14px;
+    }
+
+
+.project-container .project1::before,
+.project-container .project2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #ff2525;
+    box-shadow: 0 0 12px #ff2525;
+    transition: width 0.4s ease;
+}
+}

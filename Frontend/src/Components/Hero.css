@@ -1,0 +1,332 @@
+
+/* HERO MAIN CONTAINER */
+
+.hero-container {
+    min-height: 570px;
+    width: 100%;
+    padding: 70px 7.5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(255, 0, 30, 0.18),
+            transparent 40%
+        ),
+        #080808;
+
+    border-bottom: 1px solid #68151e;
+
+     animation-name:slideAndfade;
+    animation-duration: 2s;
+    animation-timing-function: ease-out forwards;
+
+}
+
+/* RED BACKGROUND GLOW */
+
+.hero-container::before {
+    content: "";
+
+    position: absolute;
+    width: 400px;
+    height: 400px;
+
+    background: #ff001e;
+    filter: blur(180px);
+    opacity: 0.12;
+
+    right: 10%;
+    top: 10%;
+}
+
+/* LEFT CONTENT */
+
+.hero-content {
+    width: 50%;
+    z-index: 2;
+}
+
+@keyframes slideAndfade{
+    0%{
+        opacity: 0;
+       transform: translateY(-20px);
+    }
+
+    100%{
+       
+        opacity: 1;
+         transform: translateY(0px);
+    }
+}
+
+/* AVAILABLE TEXT */
+
+.available {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #ddd;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.available span {
+    height: 9px;
+    width: 9px;
+
+    background: #ff2634;
+    border-radius: 50%;
+
+    box-shadow: 0 0 12px #ff2634;
+}
+
+/* HELLO TEXT */
+
+.hello {
+    color: #ddd;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* NAME */
+
+.namee {
+    font-size: clamp(45px, 6vw, 75px);
+    font-weight: 900;
+
+    letter-spacing: -3px;
+    margin: 5px 0;
+
+    color: white;
+}
+
+.name span {
+    color: #ff2634;
+
+    text-shadow:
+        0 0 10px rgba(255, 38, 52, 0.4);
+}
+
+/* DEVELOPER TITLE */
+
+.role {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+.role span {
+    color: #ff2634;
+}
+
+/* DESCRIPTION */
+
+.para {
+    color: #aaa;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    max-width: 440px;
+}
+
+/* BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 28px;
+}
+
+/* EXPLORE BUTTON */
+
+.work {
+    padding: 13px 22px;
+
+    background: linear-gradient(
+        120deg,
+        #ff2634,
+        #c90019
+    );
+
+    color: white;
+    border: 1px solid #ff2634;
+    border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.work:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 0 20px rgba(255, 38, 52, 0.5);
+}
+
+/* CONNECT BUTTON */
+
+.connect {
+    padding: 13px 25px;
+
+    background: transparent;
+
+    color: white;
+    border: 1px solid #ff2634;
+    border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.connect:hover {
+    transform:translateY(-4px);
+    background: #ff2634;
+    box-shadow: 0 0 15px #ff263455;
+}
+
+/* SOCIAL LINKS */
+
+.socials {
+    display: flex;
+    gap: 22px;
+
+    margin-top: 32px;
+}
+
+.socials a {
+    color: #aaa;
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: #ff2634;
+}
+
+/* RIGHT IMAGE */
+
+.hero-image {
+    width: 45%;
+    height:580px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 1;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    border: 1px solid #ff263455;
+
+    box-shadow:
+        0 0 20px #ff263422,
+        0 0 50px #ff263411;
+
+    transition: 0.4s;
+}
+
+.img:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 0 35px #ff263455;
+}
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .hero-container {
+        padding: 60px 5%;
+    }
+
+    .hero-image {
+        width: 42%;
+        height: 300px;
+    }
+
+    .hero-content {
+        width: 55%;
+    }
+
+    .name {
+        font-size: 48px;
+    }
+
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .hero-container {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 55px 6%;
+        gap: 35px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .name {
+        font-size: 45px;
+        letter-spacing: -2px;
+    }
+
+    .role {
+        font-size: 25px;
+    }
+
+    .para {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+    
+
+    .hero-image {
+        width: 100%;
+        height: 450px;
+    }
+
+    .socials {
+        gap: 15px;
+    }
+
+}

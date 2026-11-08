@@ -1,0 +1,31 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080808;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 70px 7.5%;
+}
+
+h1, h2, h3 {
+    color: white;
+}
+
+span {
+    color: #ff2634;
+}
