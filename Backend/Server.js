@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import { addContact } from './ContactController.js'
+import { addContact } from './contactController.js'
 
 const app = express()
 
